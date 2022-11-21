@@ -41,3 +41,11 @@ class QuantumState:
                                     50)
             result.append((vect, (theta, probability)))
         return result
+
+
+class QuantumGate:
+    def __init__(self, gate_matrix):
+        assert np.allclose(np.eye(gate_matrix.shape[0]), gate_matrix.H * gate_matrix), "gate matrix needs to be unitary"
+
+    def drawing_data(self):
+        pass
